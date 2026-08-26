@@ -1,0 +1,30 @@
+<div class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">newFactory</a>
+    </div>
+</div>
+
+<div class="nav-scroller" style="height: 8.8rem">
+    <nav class="nav d-flex flex-column">
+        <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+            <span class="oi oi-home" aria-hidden="true"></span> Home
+        </NavLink>
+        <NavLink class="nav-link" href="counter">
+            <span class="oi oi-plus" aria-hidden="true"></span> Counter
+        </NavLink>
+        <NavLink class="nav-link" href="weather">
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Weather
+        </NavLink>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
